@@ -1,0 +1,141 @@
+
+
+   
+header{
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;  
+    z-index: 99999;
+    
+    box-shadow: 0px 10px 13px -7px #000000, 11px 9px 16px 0px rgba(0,0,0,0);
+}
+header .container h2 {
+    text-decoration: none;
+    color: rgb(254, 204, 109);
+    font-size: 3em;
+}
+
+header .container .links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+header .container .links a:hover {
+    /* color: rgb(144, 168, 160); */
+    color: rgb(254, 204, 109);
+}
+
+
+
+main{
+    min-height: 400px;
+    padding: 80px;
+    background-image: url(https://cdn.discordapp.com/attachments/1022272232367591547/1069985443371814932/noamzadik17_maps_landing_page_background__4k_64b643d8-60f9-4321-9931-5dcb0e97ff8c.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+
+
+
+
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.conic {
+	position: relative;
+	z-index: 0;
+	/* width: 400px;
+	height: 300px; */
+	margin: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+	
+	
+}
+
+.conic::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    /* background-color: #1a232a; */
+    background-color: #212529;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /* background-image: conic-gradient(transparent, rgba(168, 239, 255, 1), transparent 30%); */
+    background-image: conic-gradient(transparent, rgb(254, 204, 109), transparent 30%);
+    animation: rotate 5s linear infinite;
+}
+
+.conic::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    /* background: #000; */
+    background-color: #212529;
+    border-radius: 5px;
+}
+
+/* .conic-demo::after {
+	animation: opacityChange 5s infinite linear;
+} */
+
+@keyframes opacityChange {
+	50% {
+		opacity:.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+footer{
+    min-height: 100px;
+    
+}
+
+footer h4 span{
+    font-weight: bold;
+    color: rgb(254, 204, 109);
+}
+
+@media (max-width: 470px) {
+    header .container h2{
+        font-size: 2em;
+    }
+
+    .conic::before {
+       
+        left: -100%;
+        top: -100%;
+        width: 300%;
+        height: 300%;
+       
+    }
+    
+    
+}
